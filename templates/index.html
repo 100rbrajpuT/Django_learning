@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Text Analyser</h1>
+    <h2>{{name}} is from {{place}}</h2>
+    <!-- <form action="/about">
+        <textarea name="text" style="margin: 10px; width: 500px ; height: 90px;" id="" cols="30" rows="10"></textarea>
+        <button type="submit">Analyse Text</button>
+    </form> -->
+    <!-- <form action="/analyze" method="get">
+        <textarea name="text" style="margin: 10px; width: 500px ; height: 90px;" id="" cols="30" rows="10"></textarea><br>
+        <input type="checkbox" name="removepunc">Remove Punctuation<br>
+        <input type="checkbox" name="fullcaps">UpperCase Chars<br>
+        <input type="checkbox" name="newlineremover">New line Remover<br>
+        <input type="checkbox" name="spaceremover">remover extra space<br>
+        <button type="submit">Analyse Text</button>
+    </form> -->
+
+    <form action="/analyze" method="post">{% csrf_token%}
+        <textarea name="text" style="margin: 10px; width: 500px ; height: 90px;" id="" cols="30" rows="10"></textarea><br>
+        <input type="checkbox" name="removepunc">Remove Punctuation<br>
+        <input type="checkbox" name="fullcaps">UpperCase Chars<br>
+        <input type="checkbox" name="newlineremover">New line Remover<br>
+        <input type="checkbox" name="spaceremover">remover extra space<br>
+        <button type="submit">Analyse Text</button>
+    </form>
+</body>
+</html>
